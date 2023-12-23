@@ -57,8 +57,8 @@ export default function Home() {
       <Image src="/images/background.jpg" fill={true} alt="background" />
       <div className={styles.sliderContainer}>
         <div ref={slider} className={styles.slider}>
-          <p ref={firstText}>Nothing is real. </p>
-          <p ref={secondText}>Everything is simulation -</p>
+          <p ref={firstText}>Nothing is real. Everything is simulation -</p>
+          <p ref={secondText}>Nothing is real. Everything is simulation -</p>
         </div>
       </div>
     </motion.main>
