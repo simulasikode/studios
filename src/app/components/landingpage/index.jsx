@@ -23,7 +23,7 @@ export default function Home() {
     gsap.set(firstText.current, { xPercent: xPercent });
     gsap.set(secondText.current, { xPercent: xPercent });
     requestAnimationFrame(animate);
-    xPercent += 0.1 * direction;
+    xPercent += 0.03 * direction;
   };
 
   useEffect(() => {
@@ -33,6 +33,7 @@ export default function Home() {
         trigger: document.documentElement,
         scrub: 0.25,
         start: 0,
+        //markers: true,
         end: window.innerHeight,
         onUpdate: (e) => (direction = e.direction * -1),
       },
@@ -63,13 +64,9 @@ export default function Home() {
         </div>
       </div>
       <div data-scroll data-scroll-speed={0.2} className={styles.description}>
-        <p>
-          Studio Simulation is an open space that offers collaborative work,
-          editions, and workshops to introduce screen printing techniques as an
-          artistic work. Studio Simulation believes that the screen printing
-          technique is still important to experiment with because it still
-          questions that need to be answered in the studio space.
-        </p>
+        <p>Handpulled</p>
+        <p>Screen Printing</p>
+        <p>Studio</p>
       </div>
     </motion.main>
   );

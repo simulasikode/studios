@@ -5,7 +5,7 @@ import { slideUp, opacity } from "./animation";
 
 export default function Description() {
   const phrase =
-    "Explorations of materials and processes of print experience self-expression of screen printing techniques to discover the joy of achievable artistic surprises.";
+    "The exploration of materials and the process of printing experience as self-expression on the screen printing technique to find the pleasure of artistic surprises can be achieved.";
   const description = useRef(null);
   const isInView = useInView(description);
   return (
@@ -28,9 +28,8 @@ export default function Description() {
           })}
         </p>
         <motion.p variants={opacity} animate={isInView ? "open" : "closed"}>
-          Studio Simulation believes that the screen printing technique is still
-          important to experiment with because it still questions that need to
-          be answered in the studio space.
+          Simulation studio believe that screen printing techniques still need
+          as much experimentation and exploration in the studio.
         </motion.p>
       </div>
     </div>
