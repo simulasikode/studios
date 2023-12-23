@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import styles from "./style.module.scss";
 import { useRef, useEffect } from "react";
@@ -60,6 +61,15 @@ export default function Home() {
           <p ref={firstText}>Nothing is real. Everything is simulation -</p>
           <p ref={secondText}>Nothing is real. Everything is simulation -</p>
         </div>
+      </div>
+      <div data-scroll data-scroll-speed={0.2} className={styles.description}>
+        <p>
+          Studio Simulation is an open space that offers collaborative work,
+          editions, and workshops to introduce screen printing techniques as an
+          artistic work. Studio Simulation believes that the screen printing
+          technique is still important to experiment with because it still
+          questions that need to be answered in the studio space.
+        </p>
       </div>
     </motion.main>
   );

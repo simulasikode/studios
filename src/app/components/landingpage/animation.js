@@ -1,6 +1,6 @@
 export const slideUp = {
   initial: {
-    y: 100,
+    y: 300,
   },
   enter: {
     y: 0,

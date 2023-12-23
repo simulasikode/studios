@@ -10,7 +10,7 @@
 
   .sliderContainer {
     position: absolute;
-    top: calc(100vh - 320px);
+    top: calc(100vh - 350px);
   }
 
   .slider {
@@ -35,19 +35,21 @@
 
   .description {
     position: absolute;
-    top: 35%;
-    left: 60%;
+    top: 30%;
+    right: 70%;
+    margin-left: 32px;
     color: white;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 300;
     p {
       margin: 0px;
-      margin-bottom: 2px;
-      margin-right: 2px;
+      margin-bottom: 10px;
     }
-    svg {
-      transform: scale(2);
-      margin-bottom: 100px;
+    span {
+      font-size: 20px;
+      font-weight: 400;
+      margin: 0;
+      margin-bottom: 16px;
     }
   }
 }
