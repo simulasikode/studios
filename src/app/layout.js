@@ -3,7 +3,6 @@ import "./globals.css";
 
 import GoogleAnalytics from "./components/GoogleAnalytics";
 import { GoogleTagManager } from "@next/third-parties/google";
-import Header from "./components/Header";
 
 const ibm = IBM_Plex_Sans({
   weight: ["100", "200", "300", "400", "500", "600", "700"],
@@ -21,7 +20,7 @@ export default function RootLayout({ children }) {
       <GoogleAnalytics />
       <body className={ibm.className}>
         <GoogleTagManager gtmId="GTM-PCWP9Z52" />
-        <Header />
+
         {children}
       </body>
     </html>

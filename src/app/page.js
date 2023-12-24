@@ -3,8 +3,8 @@ import styles from "./page.module.css";
 import { AnimatePresence } from "framer-motion";
 import Preloader from "./components/preloader";
 import { useEffect, useState } from "react";
-import LandingPage from "./components/landingpage";
-import Description from "./components/description";
+import LandingPage from "./components/Landing";
+import Description from "./components/Description";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
