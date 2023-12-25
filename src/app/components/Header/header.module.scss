@@ -1,123 +1,65 @@
 .header {
-  background-color: rgb(231, 227, 224, 0.2);
-  backdrop-filter: blur(8px);
   position: fixed;
-  width: 100%;
-  box-sizing: border-box;
-  padding: 10px;
+  display: flex;
   z-index: 1;
+  top: 0;
+  color: white;
+  padding: 20px;
+  justify-content: space-between;
+  width: 100%;
+  color: #e7e3e0;
+  font-weight: 300;
+  box-sizing: border-box;
+  align-items: center;
 
-  .background {
-    background-color: #1c1a17;
-    opacity: 0.6;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    left: 0;
-    top: 100%;
-  }
-
-  .bar {
+  .logo {
     display: flex;
-    justify-content: flex-end;
-    text-transform: uppercase;
-    font-size: 12px;
-    font-weight: 400;
-    position: relative;
-
+    cursor: pointer;
+    border-style: solid;
+    border-radius: 50px;
+    padding-left: 12px;
+    padding-right: 12px;
     p {
-      margin: 0px;
+      margin: 2px;
+      padding-left: 2px;
+      transition: all 0.5s cubic-bezier(0.76, 0, 0.24, 1);
     }
-
-    a {
-      text-decoration: none;
-      color: #1c1a17;
-      position: absolute;
-      left: 0;
-    }
-
-    .shopContainer {
+    .name {
       display: flex;
-      gap: 30px;
-      position: absolute;
-      right: 0;
-
-      .shop {
-        display: none;
-      }
-    }
-
-    .el {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      cursor: pointer;
-
-      .label {
-        position: relative;
-        display: flex;
-        align-items: center;
-      }
-
+      position: relative;
+      overflow: hidden;
+      white-space: nowrap;
+      margin-left: 5px;
+      transition: all 0.5s cubic-bezier(0.76, 0, 0.24, 1);
       p {
-        &:nth-of-type(2) {
-          position: absolute;
-          opacity: 0;
-        }
-      }
-
-      .burger {
-        width: 22.5px;
         position: relative;
-        pointer-events: none;
-
-        &::after,
-        &::before {
-          content: "";
-          height: 1px;
-          width: 100%;
-          background-color: white;
-          position: relative;
-          display: block;
-          transition: all 1s cubic-bezier(0.76, 0, 0.24, 1);
+        transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+        &:nth-of-type(2) {
+          padding-left: 0.3em;
         }
-
-        &::after {
-          top: -4px;
-        }
-
-        &::before {
-          top: 4px;
-        }
-      }
-
-      .burgerActive {
-        &::after {
-          transform: rotate(45deg);
-          top: -1px;
-        }
-
-        &::before {
-          transform: rotate(-45deg);
-          top: 1px;
+        &:nth-of-type(3) {
+          position: absolute;
+          left: 120px;
+          padding-left: 0.3em;
         }
       }
     }
-  }
-}
-
-@media only screen and (min-width: 600px) {
-  .header {
-    padding: 20px;
-
-    .bar {
-      font-size: 15px;
-    }
-
-    .shop {
-      display: block;
-      cursor: pointer;
+    &:hover {
+      .copyright {
+        transform: rotate(360deg);
+      }
+      .name {
+        padding-right: 56px;
+        .codeBy {
+          transform: translateX(-110%);
+        }
+        .dennis {
+          transform: translateX(-58px);
+        }
+        .snellenberg {
+          transform: translateX(-60px);
+        }
+      }
     }
   }
 }

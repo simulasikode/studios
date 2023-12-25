@@ -1,54 +1,61 @@
 "use client";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import styles from "./header.module.scss";
+import { usePathname } from "next/navigation";
+
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { opacity, background } from "./anim";
-import Nav from "./nav";
 
 export default function Header() {
+  const header = useRef(null);
   const [isActive, setIsActive] = useState(false);
+  const pathname = usePathname();
+  const button = useRef(null);
+
+  useEffect(() => {
+    if (isActive) setIsActive(false);
+  }, [pathname]);
+
+  useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.to(button.current, {
+      scrollTrigger: {
+        trigger: document.documentElement,
+        start: 0,
+        end: window.innerHeight,
+        onLeave: () => {
+          gsap.to(button.current, {
+            scale: 1,
+            duration: 0.25,
+            ease: "power1.out",
+          });
+        },
+        onEnterBack: () => {
+          gsap.to(
+            button.current,
+            { scale: 0, duration: 0.25, ease: "power1.out" },
+            setIsActive(false),
+          );
+        },
+      },
+    });
+  }, []);
 
   return (
-    <div className={styles.header}>
-      <div className={styles.bar}>
-        <Link href="/">Studio</Link>
-        <div
-          onClick={() => {
-            setIsActive(!isActive);
-          }}
-          className={styles.el}
-        >
-          <div
-            className={`${styles.burger} ${
-              isActive ? styles.burgerActive : ""
-            }`}
-          ></div>
-          <div className={styles.label}>
-            <motion.p
-              variants={opacity}
-              animate={!isActive ? "open" : "closed"}
-            >
-              Menu
-            </motion.p>
-            <motion.p variants={opacity} animate={isActive ? "open" : "closed"}>
-              Close
-            </motion.p>
+    <>
+      <div ref={header} className={styles.header}>
+        <Link href={"/service"}>
+          <div className={styles.logo}>
+            <p className={styles.copyright}>/</p>
+            <div className={styles.name}>
+              <p className={styles.codeBy}>Studio</p>
+              <p className={styles.dennis}>Simulasi</p>
+              <p className={styles.snellenberg}>Printing Service</p>
+            </div>
           </div>
-        </div>
-        <motion.div
-          variants={opacity}
-          animate={!isActive ? "open" : "closed"}
-          className={styles.shopContainer}
-        ></motion.div>
+        </Link>
       </div>
-      <motion.div
-        variants={background}
-        initial="initial"
-        animate={isActive ? "open" : "closed"}
-        className={styles.background}
-      ></motion.div>
-      <AnimatePresence mode="wait">{isActive && <Nav />}</AnimatePresence>
-    </div>
+    </>
   );
 }
