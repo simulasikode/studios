@@ -21,8 +21,8 @@ export default function RootLayout({ children }) {
       <GoogleAnalytics />
       <body className={ibm.className}>
         <GoogleTagManager gtmId="GTM-PCWP9Z52" />
-        {children}
         <Header />
+        {children}
       </body>
     </html>
   );

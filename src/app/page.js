@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import LandingPage from "./components/Landing";
 import Description from "./components/Description";
 import Contact from "./components/Contact";
+import Paralax from "./components/Paralax";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -28,6 +29,7 @@ export default function Home() {
       </AnimatePresence>
       <LandingPage />
       <Description />
+      <Paralax />
       <Contact />
     </main>
   );
