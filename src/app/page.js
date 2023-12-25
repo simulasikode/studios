@@ -5,6 +5,7 @@ import Preloader from "./components/preloader";
 import { useEffect, useState } from "react";
 import LandingPage from "./components/Landing";
 import Description from "./components/Description";
+import Contact from "./components/Contact";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -27,6 +28,7 @@ export default function Home() {
       </AnimatePresence>
       <LandingPage />
       <Description />
+      <Contact />
     </main>
   );
 }

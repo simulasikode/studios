@@ -1,0 +1,28 @@
+.footer {
+  padding-top: 96px;
+  margin: 200px;
+  margin-top: 200px;
+  margin-bottom: 32px;
+  border-top: 1px solid #36332e;
+}
+
+.h1 {
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 16px;
+  .p {
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 15px;
+  }
+}
+
+.copy {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 15px;
+  margin-top: 200px;
+}
