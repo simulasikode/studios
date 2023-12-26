@@ -1,6 +1,6 @@
 "use client";
 import styles from "./contact.module.scss";
-import Image from "next/image";
+import Link from "next/link";
 import { useRef } from "react";
 import { useScroll, motion, useTransform, useSpring } from "framer-motion";
 
@@ -16,39 +16,19 @@ export default function Contact() {
   return (
     <motion.div style={{ y }} ref={container} className={styles.contact}>
       <div className={styles.body}>
-        <div className={styles.title}>
-          <span>
-            <h2>Get in Touch</h2>
-          </span>
-          <motion.svg
-            style={{ rotate, scale: 2 }}
-            width="9"
-            height="9"
-            viewBox="0 0 9 9"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M8 8.5C8.27614 8.5 8.5 8.27614 8.5 8L8.5 3.5C8.5 3.22386 8.27614 3 8 3C7.72386 3 7.5 3.22386 7.5 3.5V7.5H3.5C3.22386 7.5 3 7.72386 3 8C3 8.27614 3.22386 8.5 3.5 8.5L8 8.5ZM0.646447 1.35355L7.64645 8.35355L8.35355 7.64645L1.35355 0.646447L0.646447 1.35355Z"
-              fill="white"
-            />
-          </motion.svg>
-        </div>
-        <div className={styles.nav}>
-          <span>mail</span>
-        </div>
         <div className={styles.info}>
+          <span>
+            <h3>So, Something like that.</h3>
+            <p>We do hand-pulled screen print studio</p>
+          </span>
+        </div>
+        <div className={styles.title}>simulasi</div>
+        <div className={styles.footer}>
           <div>
             <span>
-              <p>2023 © Studio</p>
+              <h3>©2023. Simulasi</h3>
+              <p>Term of use</p>
             </span>
-          </div>
-          <div>
-            <span>
-              <h3>socials</h3>
-              <p>Awwwards</p>
-            </span>
-            <p>Instagram</p>
           </div>
         </div>
       </div>
