@@ -1,8 +1,7 @@
 "use client";
 import styles from "./contact.module.scss";
-import Link from "next/link";
 import { useRef } from "react";
-import { useScroll, motion, useTransform, useSpring } from "framer-motion";
+import { useScroll, motion, useTransform } from "framer-motion";
 
 export default function Contact() {
   const container = useRef(null);
@@ -10,24 +9,29 @@ export default function Contact() {
     target: container,
     offset: ["start end", "end end"],
   });
-  const x = useTransform(scrollYProgress, [0, 1], [0, 100]);
-  const y = useTransform(scrollYProgress, [0, 1], [-500, 0]);
-  const rotate = useTransform(scrollYProgress, [0, 1], [120, 90]);
+  const y = useTransform(scrollYProgress, [0, 1], [100, 0]);
+  const scale = useTransform(scrollYProgress, [0, 1], [4.2, 1]);
   return (
-    <motion.div style={{ y }} ref={container} className={styles.contact}>
+    <motion.div ref={container} className={styles.contact}>
       <div className={styles.body}>
-        <div className={styles.info}>
-          <span>
-            <h3>So, Something like that.</h3>
-            <p>We do hand-pulled screen print studio</p>
-          </span>
-        </div>
-        <div className={styles.title}>simulasi</div>
+        <motion.div className={styles.info} style={{ y }}>
+          <motion.span>
+            <h3>Something like that.</h3>
+            <p>We do hand-pulled screen print</p>
+            <p>for commision, editioning, and workshop.</p>
+          </motion.span>
+        </motion.div>
+        <motion.div className={styles.title} style={{ scale, y }}>
+          Studio
+        </motion.div>
         <div className={styles.footer}>
           <div>
             <span>
               <h3>©2023. Simulasi</h3>
-              <p>Term of use</p>
+              <span>
+                <p>Term of use</p>
+                <p>Privacy policy</p>
+              </span>
             </span>
           </div>
         </div>
