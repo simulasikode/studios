@@ -1,0 +1,97 @@
+.container {
+  position: relative;
+  max-width: 520px;
+  margin: 20px;
+  padding-top: 8px;
+  border: 1px solid #8b8376;
+  background-color: #36332e;
+  color: #cec7c1;
+
+  div {
+    padding: 20px;
+  }
+  h1 {
+    font-size: 28px;
+    font-weight: 500;
+  }
+  h3 {
+    font-size: 20px;
+    padding-top: 12px;
+    font-weight: 400;
+    span {
+      font-size: 20px;
+      font-weight: 500;
+      color: #9ca9ad;
+    }
+  }
+  h4 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 20px;
+  }
+  label {
+    display: block;
+    margin-bottom: 6px;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #ada49b;
+  }
+  input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-bottom: 2px solid #4d575b;
+    background-color: #1c1a17;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+    outline: none;
+  }
+  select {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-bottom: 2px solid #4d575b;
+    background-color: #1c1a17;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+    outline: none;
+  }
+  button {
+    background-color: #8b8376;
+    color: #1c1a17;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+    padding-top: 16px;
+    padding-right: 124px;
+    padding-left: 16px;
+    padding-bottom: 18px;
+    margin-top: 20px;
+  }
+
+  button:hover {
+    background-color: #ada49b;
+    color: #1c1a17;
+  }
+  hr {
+    border: 0;
+    border-top: 1px solid #8b8376;
+  }
+  p {
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 12px;
+    color: #ada49b;
+    margin-bottom: 6px;
+  }
+}
+
+/* Optional: Style the result message */
+.result-message {
+  margin-top: 32px;
+  font-size: 16px;
+  color: #333;
+}

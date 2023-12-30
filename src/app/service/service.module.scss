@@ -1,9 +1,46 @@
-.service {
-  display: flex;
-  position: relative;
-  width: 100vh;
+.warp {
+  width: 100vw;
   height: 100vh;
-  overflow: hidden;
-  padding: 12px;
-  padding-left: 280px;
+  margin: 64px 0;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+.left_column {
+  height: 100px;
+  padding: 20px;
+  h1 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 12px;
+    width: 520px;
+    margin-bottom: 6px;
+  }
+}
+
+.right_column {
+  height: 100px;
+  h1 {
+    font-size: 20px;
+    padding: 20px;
+  }
+}
+
+.img {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
