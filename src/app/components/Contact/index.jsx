@@ -10,7 +10,7 @@ export default function Contact() {
     target: container,
     offset: ["start end", "end end"],
   });
-  const top = useTransform(scrollYProgress, [0, 1], [-100, 0]);
+  const top = useTransform(scrollYProgress, [0, 1], [-148, 0]);
   const originY = useTransform(scrollYProgress, [0, 1], [0.4, 0]);
   const scale = useTransform(scrollYProgress, [0, 1], [3.0, 1]);
   return (
@@ -26,17 +26,6 @@ export default function Contact() {
         <motion.div className={styles.studio} style={{ scale, originY }}>
           <Images src="studio.svg" alt="studio" width={1440} height={286} />
         </motion.div>
-        <div className={styles.footer}>
-          <div>
-            <span>
-              <h3>©2023. Simulasi</h3>
-              <span>
-                <p>Term of use</p>
-                <p>Privacy policy</p>
-              </span>
-            </span>
-          </div>
-        </div>
       </div>
     </motion.div>
   );

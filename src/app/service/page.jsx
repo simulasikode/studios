@@ -12,13 +12,18 @@ export default function Service() {
           <div className={styles.column}>
             <div className={styles.left_column}>
               <h1>Service</h1>
-              <p>We doing hand pulled screen printing on paper</p>
+              <p>
+                We doing hand pulled screen printing on paper using waterbase
+                ink.
+              </p>
               <p>
                 For regular paper, we offer{" "}
                 <u>Fedrigoni ARENA Smooth 300gsm.</u> Or you can request what
-                kind paper you like. You can calculate your prize before
-                printing.
+                kind paper you like. Before that you can calculate first your
+                prize before order.
               </p>
+              <p>Maximal print area 43x64cm</p>
+              <p>This a sample preview regular paper size and print areas. </p>
               <Images
                 src="papersize_white.svg"
                 alt="paper size"
@@ -26,7 +31,6 @@ export default function Service() {
                 height={420}
                 className={styles.img}
               />
-              <p>Contact here: studio.simulasi@gmail.com</p>
             </div>
           </div>
           <div className={styles.column}>

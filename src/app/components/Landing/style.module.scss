@@ -1,3 +1,5 @@
+@import "../media";
+
 .landing {
   position: relative;
   display: flex;
@@ -43,6 +45,37 @@
     p {
       margin: 0px;
       margin-bottom: 0px;
+    }
+  }
+  @include tablet {
+    .description {
+      top: 30%;
+      left: 70%;
+      transform: translate(-50%, -50%);
+      font-size: 24px;
+      p {
+        margin: 0px;
+        margin-bottom: 0px;
+      }
+    }
+    .sliderContainer {
+      top: calc(100vh - 300px);
+    }
+  }
+  @include mobile {
+    .description {
+      top: 80%;
+      left: 60%;
+      transform: translate(-50%, -50%);
+      font-size: 18px;
+      p {
+        margin: 0px;
+        margin-bottom: 0px;
+      }
+    }
+    .sliderContainer {
+      display: none;
+      top: calc(100vh - 300px);
     }
   }
 }

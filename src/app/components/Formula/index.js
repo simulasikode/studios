@@ -60,61 +60,61 @@ export default function Home() {
   };
 
   return (
-    <div className={styles.container}>
-      <h1> Calculated your Art print</h1>
-      <hr />
-      <div>
-        <label>
-          Sheet of Paper
-          <input
-            type="text"
-            className={styles.input}
-            value={new Intl.NumberFormat("id-ID").format(costPerSheet)}
-            onChange={(e) => setCostPerSheet(e.target.value)}
-          />
-        </label>
-        <label>
-          Number of Colors
-          <input
-            type="text"
-            className={styles.input}
-            value={new Intl.NumberFormat("id-ID").format(colors)}
-            onChange={(e) => setColors(e.target.value)}
-          />
-        </label>
-        <label>
-          Print Size
-          <select
-            className={styles.input}
-            value={selectedPrintSize.label}
-            onChange={(e) => {
-              const selectedSize = printSizes.find(
-                (size) => size.label === e.target.value,
-              );
-              setSelectedPrintSize(selectedSize || printSizes[0]);
-            }}
-          >
-            {printSizes.map((size) => (
-              <option key={size.label} value={size.label}>
-                {size.label}
-              </option>
-            ))}
-          </select>
-        </label>
-        <button className={styles.button} onClick={calculateCost}>
-          Calculate
-        </button>
-        <h3>
-          Total Cost per Sheet: IDR{" "}
-          <span>{new Intl.NumberFormat("id-ID").format(totalCost)}</span>
-        </h3>
+    <div className={styles.formula}>
+      <div className={styles.container}>
+        <h1> Calculated your Art print</h1>
         <hr />
-        <h4>Note:</h4>
-        <p>
-          Simulated your prize before you ordering a commission work or
-          editioning with us. We using <u>Fedrigoni ARENA Smooth 300gsm</u> for
-          screen printing.
-        </p>
+        <div>
+          <label>
+            Sheet of Paper
+            <input
+              type="text"
+              className={styles.input}
+              value={new Intl.NumberFormat("id-ID").format(costPerSheet)}
+              onChange={(e) => setCostPerSheet(e.target.value)}
+            />
+          </label>
+          <label>
+            Number of Colors
+            <input
+              type="text"
+              className={styles.input}
+              value={new Intl.NumberFormat("id-ID").format(colors)}
+              onChange={(e) => setColors(e.target.value)}
+            />
+          </label>
+          <label>
+            Print Size
+            <select
+              className={styles.input}
+              value={selectedPrintSize.label}
+              onChange={(e) => {
+                const selectedSize = printSizes.find(
+                  (size) => size.label === e.target.value,
+                );
+                setSelectedPrintSize(selectedSize || printSizes[0]);
+              }}
+            >
+              {printSizes.map((size) => (
+                <option key={size.label} value={size.label}>
+                  {size.label}
+                </option>
+              ))}
+            </select>
+          </label>
+          <button className={styles.button} onClick={calculateCost}>
+            Calculate
+          </button>
+          <h3>
+            Total Cost per Sheet: IDR{" "}
+            <span>{new Intl.NumberFormat("id-ID").format(totalCost)}</span>
+          </h3>
+          <hr />
+          <p>Note: Contact us for custom paper </p>
+        </div>
+        <div>
+          <p>Calculator Version 0.1.0</p>
+        </div>
       </div>
     </div>
   );
