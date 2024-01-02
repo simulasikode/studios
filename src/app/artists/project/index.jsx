@@ -2,7 +2,8 @@
 import React from "react";
 import styles from "./style.module.scss";
 
-export default function index({ index, title, contact, setModal }) {
+export default function index({ index, title, contact, setModal, projects }) {
+  const project = projects[index];
   return (
     <div
       onMouseEnter={() => {
@@ -13,12 +14,15 @@ export default function index({ index, title, contact, setModal }) {
       }}
       className={styles.project}
     >
-      <div>
-        <h2>{title}</h2>
-        <span>
-          <p>{contact}</p>
-        </span>
-      </div>
+      <a href={project.link} target="_blank" rel="noopener noreferrer">
+        <div>
+          <h2>{title}</h2>
+
+          <span>
+            <p>{contact}</p>
+          </span>
+        </div>
+      </a>
     </div>
   );
 }

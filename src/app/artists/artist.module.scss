@@ -1,3 +1,5 @@
+@import "../components/_media.scss";
+
 .title {
   padding-top: 96px;
   margin: 0 20px 0 20px;
@@ -11,13 +13,23 @@
     width: 100%;
     border: 0.75px solid;
   }
+
+  @include tablet {
+    h1 {
+      font-size: 38px;
+    }
+  }
+  @include mobile {
+    h1 {
+      font-size: 28px;
+    }
+  }
 }
 .container {
   display: flex;
-  height: 80dvh;
+  height: 100dvh;
   margin: 0 20px 0 20px;
   align-items: center;
-  justify-content: center;
 }
 
 .table {

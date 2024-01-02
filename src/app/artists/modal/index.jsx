@@ -67,20 +67,27 @@ export default function Modal({ modal, projects }) {
       >
         <div style={{ top: index * -100 + "%" }} className={styles.modalSlider}>
           {projects.map((project, index) => {
-            const { src, color } = project;
+            const { src, color, link } = project;
             return (
-              <div
-                className={styles.modal}
-                style={{ backgroundColor: color }}
+              <a
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
                 key={`modal_${index}`}
               >
-                <Image
-                  src={`/images/artwork/${src}`}
-                  width={300}
-                  height={0}
-                  alt="image"
-                />
-              </div>
+                <div
+                  className={styles.modal}
+                  style={{ backgroundColor: color }}
+                  key={`modal_${index}`}
+                >
+                  <Image
+                    src={`/images/artwork/${src}`}
+                    width={300}
+                    height={0}
+                    alt="image"
+                  />
+                </div>
+              </a>
             );
           })}
         </div>
