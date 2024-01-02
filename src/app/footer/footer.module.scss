@@ -3,7 +3,7 @@
 .footer {
   bottom: 0px;
   position: sticky;
-  width: 100vw;
+  width: 100dvw;
   div {
     font-size: 14px;
     font-weight: 300;
@@ -28,6 +28,7 @@
   .social {
     display: flex;
     gap: 16px;
+    margin-bottom: 32px;
     bottom: 32px;
     p {
       font-weight: 300;

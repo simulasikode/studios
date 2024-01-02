@@ -4,7 +4,7 @@
   align-items: center;
   z-index: 1;
   top: 0;
-  color: white;
+  color: var(--font-standard) !important;
   padding: 18px;
   justify-content: space-between;
   width: 100%;
@@ -12,6 +12,7 @@
   font-weight: 500;
   box-sizing: border-box;
   align-items: center;
+  mix-blend-mode: difference;
 
   .logo {
     display: flex;

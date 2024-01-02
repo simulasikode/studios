@@ -1,5 +1,7 @@
+@import "../media";
+
 .gallery {
-  height: 175vh;
+  height: 175dvh;
   background: #36332e;
   position: relative;
   display: flex;
@@ -7,6 +9,10 @@
   padding: 2vw;
   box-sizing: border-box;
   overflow: hidden;
+  @include mobile {
+    height: 175dvh;
+    max-height: 100%;
+  }
   .column {
     position: relative;
     height: 100%;
