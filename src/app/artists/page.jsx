@@ -3,52 +3,52 @@ import styles from "./artist.module.scss";
 import { useState } from "react";
 import Project from "./project";
 import Modal from "./modal";
-import Contact from "../components/Contact";
+import Contact from "../_component/Contact";
 
 const projects = [
   {
     title: "Ahmad Luthfi",
     contact: "Riso print",
-    src: "1.jpg",
-    color: "#8C8C8C",
+    src: "06.jpg",
+    color: "#91689f",
     link: "https://www.instagram.com/lutpihh/",
   },
   {
     title: "Fajarallanda",
     contact: "Screen print",
-    src: "1.jpg",
-    color: "#e3e3e3",
+    src: "04.jpg",
+    color: "#31322d",
     link: "https://www.instagram.com/allandafajar/",
   },
 
   {
     title: "Iggypoke",
     contact: "Riso print",
-    src: "1.jpg",
-    color: "#EFE8D3",
+    src: "02.jpg",
+    color: "#2466b4",
     link: "https://www.instagram.com/iggypoketattoo/",
   },
   {
     title: "Indah Indriyati F.",
     contact: "Riso print",
-    src: "1.jpg",
-    color: "#000000",
+    src: "05.jpg",
+    color: "#f32837",
     link: "https://www.instagram.com/indahindriyantif/",
   },
 
   {
     title: "Kurlyminal",
     contact: "Screen print, Riso print",
-    src: "1.jpg",
-    color: "#706D63",
+    src: "03.jpg",
+    color: "#f49b9b",
     link: "https://www.instagram.com/kurlyminal/",
   },
   {
     title: "M Fahriza Ansyari",
-    contact: "Screen print",
-    src: "1.jpg",
-    color: "#000000",
-    link: "https:instagram.com/keppett",
+    contact: "Screen print, Riso print",
+    src: "01.jpg",
+    color: "#2fedad",
+    link: "https://www.instagram.com/keppett/",
   },
 ];
 

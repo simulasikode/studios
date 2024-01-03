@@ -1,3 +1,5 @@
+@import "../media";
+
 .header {
   position: fixed;
   display: flex;
@@ -8,10 +10,7 @@
   padding: 18px;
   justify-content: space-between;
   width: 100%;
-  color: #e7e3e0;
   font-weight: 500;
-  box-sizing: border-box;
-  align-items: center;
   mix-blend-mode: difference;
 
   .logo {
@@ -61,6 +60,25 @@
         .snellenberg {
           transform: translateX(-40%);
         }
+      }
+    }
+  }
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    ul {
+      display: flex;
+      gap: 20px;
+    }
+    li {
+      list-style: none;
+      cursor: pointer;
+      transition: all 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+      &:hover {
+        color: #4d575b;
+        transform: scale(1.1);
+        border-bottom: 1px solid #4d575b;
       }
     }
   }

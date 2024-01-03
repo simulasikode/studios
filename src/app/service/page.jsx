@@ -1,8 +1,8 @@
 "use client";
 import Images from "next/image";
 import styles from "./service.module.scss";
-import Formula from "../components/Formula";
-import Contact from "../components/Contact";
+import Formula from "../_component/Formula";
+import Contact from "../_component/Contact";
 
 export default function Service() {
   return (

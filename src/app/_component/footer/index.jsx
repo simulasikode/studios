@@ -18,7 +18,12 @@ export default function Footer() {
       </div>
       <div>
         <span>
-          <h3>©2023. Simulasi</h3>
+          <h3>
+            ©2023.{" "}
+            <Link href="https://simulatedcode.netlify.app/" target="_blank">
+              Simulasi
+            </Link>
+          </h3>
           <span>
             <p>Term of use</p>
             <p>Privacy policy</p>

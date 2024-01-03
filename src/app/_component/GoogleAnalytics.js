@@ -14,6 +14,10 @@ function Home() {
           gtag('config', 'G-2EQYKBXGNE');
         `}
       </Script>
+      <Script
+        async
+        src={`https://www.googletagmanager.com/gtag/js?id=AW-11462618511`}
+      ></Script>
     </>
   );
 }

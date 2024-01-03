@@ -1,4 +1,4 @@
-@import "../components/media";
+@import "../media";
 
 .footer {
   bottom: 0px;
@@ -19,6 +19,9 @@
       }
       p {
         font-weight: 300;
+        &:hover {
+          color: gray;
+        }
       }
       @include mobile {
         display: flex;

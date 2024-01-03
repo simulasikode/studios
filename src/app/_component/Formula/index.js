@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import styles from "./style.module.scss";
+import { sendGTMEvent } from "@next/third-parties/google";
 
 const printSizes = [
   { label: "Custom paper", value: 0 },
@@ -36,10 +37,20 @@ export default function Home() {
   const [selectedPrintSize, setSelectedPrintSize] = useState(printSizes[0]);
   const [totalCost, setTotalCost] = useState("");
 
+  const sendGTMEvent = () => {
+    // Your logic to send GTM event goes here
+    // For example:
+    window.dataLayer.push({
+      event: "calculateCostClicked",
+      value: "xyz",
+    });
+  };
+
   const calculateCost = () => {
     const costPerSheetValue = parseFloat(costPerSheet.replace(/[^\d]/g, "")); // Remove non-numeric characters
     const colorsValue = parseFloat(colors.replace(/[^\d]/g, "")); // Remove non-numeric characters
     const printSizeValue = selectedPrintSize.value;
+    sendGTMEvent();
 
     // Calculate total cost including base cost per sheet and additional cost per color
     const subtotal =

@@ -1,12 +1,12 @@
 "use client";
 import styles from "./page.module.css";
 import { AnimatePresence } from "framer-motion";
-import Preloader from "./components/preloader";
+import Preloader from "./_component/preloader";
 import { useEffect, useState } from "react";
-import LandingPage from "./components/Landing";
-import Description from "./components/Description";
-import Contact from "./components/Contact";
-import Paralax from "./components/Paralax";
+import LandingPage from "./_component/Landing";
+import Description from "./_component/Description";
+import Contact from "./_component/Contact";
+import Paralax from "./_component/Paralax";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);

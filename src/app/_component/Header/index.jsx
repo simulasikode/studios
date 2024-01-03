@@ -7,7 +7,7 @@ export default function Header() {
   return (
     <>
       <div className={styles.header}>
-        <Link href="/service">
+        <Link href="/">
           <div className={styles.logo}>
             <p className={styles.copyright}>
               <Image
@@ -24,6 +24,16 @@ export default function Header() {
             </div>
           </div>
         </Link>
+        <div className={styles.nav}>
+          <ul>
+            <li>
+              <Link href="/artists">Artists</Link>
+            </li>
+            <li>
+              <Link href="/service">Service</Link>
+            </li>
+          </ul>
+        </div>
       </div>
     </>
   );
