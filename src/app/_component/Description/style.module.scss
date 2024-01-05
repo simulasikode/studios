@@ -1,14 +1,14 @@
 @import "../media";
 
 .description {
-  padding-left: 200px;
-  padding-right: 200px;
-  margin-top: 284px;
-  margin-bottom: 384px;
+  padding: 0 200px 0 200px;
+  margin-top: 320px;
+  margin-bottom: 320px;
   display: flex;
   justify-content: center;
+
   .body {
-    max-width: 1400px;
+    max-width: 100%;
     display: flex;
     gap: 50px;
     position: relative;
@@ -55,8 +55,7 @@
   @include mobile {
     padding-left: 32px;
     padding-right: 32px;
-    margin-top: 64px;
-    margin-bottom: 64px;
+    height: 50svh;
     .body {
       flex-direction: column;
       p {

@@ -25,8 +25,12 @@ export default function Footer() {
             </Link>
           </h3>
           <span>
-            <p>Term of use</p>
-            <p>Privacy policy</p>
+            <p>
+              <Link href="/term">Term of use</Link>
+            </p>
+            <p>
+              <Link href="/privacy">Privacy policy</Link>
+            </p>
           </span>
         </span>
       </div>
