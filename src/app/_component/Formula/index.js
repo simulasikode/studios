@@ -8,28 +8,28 @@ const printSizes = [
   {
     label:
       "Paper size 8.3 x 11.7 inches (A4) — Print area 6.9 x 9.8 inches (B5)",
-    value: 17000,
+    value: 36000,
   }, // IDR
   {
     label:
       "Paper size 11.7 × 16.5 inches (A3)  — Print area 9.8 × 13.9 inches (B4)",
-    value: 26000,
+    value: 60000,
   }, // IDR
   {
     label:
       "Paper size 13 × 19 inches (A3+)  — Print area 11.7 × 16.5 inches (A3)",
-    value: 34500,
+    value: 60000,
   }, // IDR
 
   {
     label:
-      "Paper size 16.5 x 23.4 inches (A2) — Print area 9.7 × 27.8 inches (B2)",
-    value: 57000,
+      "Paper size 16.5 x 23.4 inches (A2) — Print area 13.9  × 19.7 inches (B3)",
+    value: 120000,
   }, // IDR
 ];
 
-const baseCostPerCapital = 651000; // IDR - Adjust this based on your base cost per sheet
-const additionalCostPerColor = 10500; // IDR - Adjust this based on your cost per color
+const baseCostPerCapital = 357000; // IDR - Adjust this based on your base cost per sheet
+const additionalCostPerColor = 56000; // IDR - Adjust this based on your cost per color
 
 export default function Home() {
   const [costPerSheet, setCostPerSheet] = useState("");
@@ -47,27 +47,32 @@ export default function Home() {
   };
 
   const calculateCost = () => {
-    const costPerSheetValue = parseFloat(costPerSheet.replace(/[^\d]/g, "")); // Remove non-numeric characters
-    const colorsValue = parseFloat(colors.replace(/[^\d]/g, "")); // Remove non-numeric characters
+    const costPerSheetValue = parseFloat(costPerSheet);
+    const colorsValue = parseInt(colors, 10);
     const printSizeValue = selectedPrintSize.value;
+    //const costPerSheetValue = parseFloat(costPerSheet.replace(/[^\d]/g, "")); // Remove non-numeric characters
+    //const colorsValue = parseFloat(colors.replace(/[^\d]/g, "")); // Remove non-numeric characters
+    //const printSizeValue = selectedPrintSize.value;
     sendGTMEvent();
 
     // Calculate total cost including base cost per sheet and additional cost per color
     const subtotal =
-      (baseCostPerCapital / costPerSheetValue) * 2 +
+      (baseCostPerCapital / costPerSheetValue) * 1 +
       colorsValue * additionalCostPerColor +
       printSizeValue;
 
     // You might have other fees, discounts, or calculations to consider
 
     // Example: Apply a 10% discount for quantities over 100 (excluding print size cost)
-    const discountThreshold = 50;
+    const discountThreshold = 30;
     const discountPercentage = costPerSheetValue > discountThreshold ? 0.1 : 0;
 
     const discount = subtotal * discountPercentage;
     const discountedTotal = subtotal - discount;
 
-    setTotalCost(discountedTotal.toFixed(2));
+    const roundedTotal = Math.ceil(discountedTotal);
+
+    setTotalCost(roundedTotal.toFixed(2));
   };
 
   return (
@@ -79,7 +84,7 @@ export default function Home() {
           <label>
             Sheet of Paper
             <input
-              type="text"
+              type="number"
               className={styles.input}
               value={new Intl.NumberFormat("id-ID").format(costPerSheet)}
               onChange={(e) => setCostPerSheet(e.target.value)}
@@ -88,7 +93,7 @@ export default function Home() {
           <label>
             Number of Colors
             <input
-              type="text"
+              type="number"
               className={styles.input}
               value={new Intl.NumberFormat("id-ID").format(colors)}
               onChange={(e) => setColors(e.target.value)}
@@ -121,10 +126,10 @@ export default function Home() {
             <span>{new Intl.NumberFormat("id-ID").format(totalCost)}</span>
           </h3>
           <hr />
-          <p>Note: Contact us for custom paper </p>
+          <p>Note: Minimum print run 15 pcs.</p>
         </div>
         <div>
-          <p>Calculator Version 0.1.0</p>
+          <p>Calculator Version 0.2.1</p>
         </div>
       </div>
     </div>

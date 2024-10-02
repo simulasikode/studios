@@ -43,6 +43,9 @@
     margin-top: 12px;
     margin-bottom: 6px;
   }
+  a {
+    font-weight: 400;
+  }
   @include tablet {
     max-width: 100%;
     width: 420px;

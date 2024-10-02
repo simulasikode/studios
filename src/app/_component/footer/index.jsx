@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <div className={styles.footer}>
       <div className={styles.social}>
-        <Link href="https://instagram.com/studio.simulasi" target="_blank">
+        <Link href="https://instagram.com/simulasi.studio" target="_blank">
           <p>Instagram</p>
         </Link>
         <Link

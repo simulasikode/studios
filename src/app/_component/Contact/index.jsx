@@ -20,7 +20,7 @@ export default function Contact() {
           <motion.span>
             <h3>Something like that.</h3>
             <p>We do hand-pulled screen print</p>
-            <p>for commission, editioning, and workshop.</p>
+            <p>for editioning and workshop.</p>
           </motion.span>
         </motion.div>
         <motion.div className={styles.studio} style={{ scale, originY }}>

@@ -17,13 +17,14 @@ export default function Service() {
                 ink.
               </p>
               <p>
-                For regular paper, we offer{" "}
-                <u>Fedrigoni ARENA Smooth 300gsm.</u> Or you can request what
-                kind paper you like. Before that you can calculate first your
-                prize before order.
+                For regular paper, we offer <u>Fedrigoni ARENA 300gsm.</u> Or
+                you can request what kind paper you like. You can use the
+                calculator to find out the printing costs according to the size
+                you want.
               </p>
-              <p>Maximal print area 43x64cm</p>
+              <p>Maximal print area 53x83cm</p>
               <p>This a sample preview regular paper size and print areas. </p>
+              <p>Request a Quote here</p>
               <Images
                 src="papersize_white.svg"
                 alt="paper size"
